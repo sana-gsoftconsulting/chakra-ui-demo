@@ -33,7 +33,7 @@ function CardHeader({ post, ...rest }) {
           Funding
         </Button>
 
-        <Box display="flex" alignItems="center">
+        <Box display="flex" alignItems="center" >
           <WrapItem>
             <Avatar
               height="44px"
@@ -50,6 +50,7 @@ function CardHeader({ post, ...rest }) {
             fontStyle="normal"
             lineHeight="27px"
             color="#FFFFFF"
+            ms={2}
             ps={1}
           >
             {post.author.name}
@@ -65,6 +66,8 @@ function CardHeader({ post, ...rest }) {
           color="#FFFFFF"
           opacity="0.5"
           ps={1}
+          display="flex" 
+          alignItems="center" 
         >
           {post.time}
         </Text>
