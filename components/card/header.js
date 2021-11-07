@@ -12,24 +12,53 @@ import {
 function CardHeader({ post, ...rest }) {
   return (
     <Box display="flex" justifyContent="space-between" alignItems="center">
-      <HStack>
-        <Button fontFamily="Poppins" 
-        fontSize	="13px"
-        fontWeight="600"
-        lineHeight="19px"
-       color="#FFFFFF"
-       _hover={{
-        background: "customBtn",
-        color: "#FFFFFF",
-      }}
-        bg="customBtn" borderRadius="50px" textTransform="capitalize">
+      <HStack direction={["column", "row"]}>
+        <Button
+          fontFamily="Poppins"
+          fontSize="13px"
+          fontWeight="600"
+          lineHeight="19px"
+          color="#FFFFFF"
+          height="44px"
+          fontStyle="normal"
+          width="94px"
+          _hover={{
+            background: "customBtn",
+            color: "#FFFFFF",
+          }}
+          bg="customBtn"
+          borderRadius="100px"
+          textTransform="capitalize"
+        >
           Funding
         </Button>
         <WrapItem>
-          <Avatar name={post.author.name} src={post.author.profilePictureUrl} />
+          <Avatar
+            height="44px"
+            width="44px"
+            name={post.author.name}
+            src={post.author.profilePictureUrl}
+          />
         </WrapItem>
-        <Heading fontSize="xl">{post.author.name}</Heading>
-        <Text fontSize="xs" opacity="0.5">
+        <Heading
+          fontFamily="Poppins"
+          fontSize="18px"
+          fontWeight="600"
+          fontStyle="normal"
+          lineHeight="27px"
+          color="#FFFFFF"
+        >
+          {post.author.name}
+        </Heading>
+        <Text
+          fontFamily="Poppins"
+          fontSize="12px"
+          fontWeight="normal"
+          fontStyle="normal"
+          lineHeight="18px"
+          color="#FFFFFF"
+          opacity="0.5"
+        >
           {post.time}
         </Text>
       </HStack>

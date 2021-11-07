@@ -10,16 +10,28 @@ import {
 function CardFooter({ post, ...rest }) {
   return (
     <Box p={5} layerStyle="requestCard">
-      <Text mb={4} fontWeight="bold" fontSize="18px">
+      <Text mb={4} 
+      fontFamily="Poppins"
+      fontSize="16px"
+      fontWeight="600"
+      fontStyle="normal"
+      lineHeight="24px"
+      color="#FFFFFF"
+      >
         How Can You Help with this request?
       </Text>
 
       <InputGroup size="md">
         <Input
           placeholder="Type here..."
-          borderRadius="50px"
+          borderRadius="100px"
           border="none"
           bg="input"
+          fontFamily="Lato"
+          fontSize="16px"
+          fontWeight="normal"
+          fontStyle="normal"
+          lineHeight="19px"
         />
         <InputRightElement>
           <Icon viewBox="0 0 18 15" opacity="0.5">
