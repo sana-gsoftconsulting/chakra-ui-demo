@@ -7,15 +7,15 @@ function Card({ post, ...rest }) {
   return (
     <Box width="640px" 
     width={[
-      "100%", // 0-30em
-      "100%", // 30em-48em
-      "100%", // 30em-48em
-      "640px", // 30em-48em
+      "100%", 
+      "100%",
+      "100%",
+      "640px",
      
     ]}
     
     shadow="md" {...rest} layerStyle="card">
-      <Box p={10}>
+      <Box p={9}>
         <CardHeader post={post} />
         <CardContent post={post} />
       </Box>

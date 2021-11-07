@@ -29,6 +29,7 @@ function CardHeader({ post, ...rest }) {
           bg="customBtn"
           borderRadius="100px"
           textTransform="capitalize"
+          
         >
           Funding
         </Button>
@@ -38,6 +39,7 @@ function CardHeader({ post, ...rest }) {
             width="44px"
             name={post.author.name}
             src={post.author.profilePictureUrl}
+            ms={1}
           />
         </WrapItem>
         <Heading
@@ -47,6 +49,7 @@ function CardHeader({ post, ...rest }) {
           fontStyle="normal"
           lineHeight="27px"
           color="#FFFFFF"
+          ps={1}
         >
           {post.author.name}
         </Heading>
@@ -58,6 +61,7 @@ function CardHeader({ post, ...rest }) {
           lineHeight="18px"
           color="#FFFFFF"
           opacity="0.5"
+          ps={1}
         >
           {post.time}
         </Text>

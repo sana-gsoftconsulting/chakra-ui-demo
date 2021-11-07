@@ -10,13 +10,14 @@ import {
 function CardFooter({ post, ...rest }) {
   return (
     <Box p={5} layerStyle="requestCard">
-      <Text mb={4} 
-      fontFamily="Poppins"
-      fontSize="16px"
-      fontWeight="600"
-      fontStyle="normal"
-      lineHeight="24px"
-      color="#FFFFFF"
+      <Text
+        mb={4}
+        fontFamily="Poppins"
+        fontSize="16px"
+        fontWeight="600"
+        fontStyle="normal"
+        lineHeight="24px"
+        color="#FFFFFF"
       >
         How Can You Help with this request?
       </Text>
