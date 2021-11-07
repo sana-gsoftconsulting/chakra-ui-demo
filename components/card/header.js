@@ -6,13 +6,13 @@ import {
   Button,
   Avatar,
   WrapItem,
-  HStack,
+  Stack,
 } from "@chakra-ui/react";
 
 function CardHeader({ post, ...rest }) {
   return (
     <Box display="flex" justifyContent="space-between" alignItems="center">
-      <HStack direction={["column", "row"]}>
+      <Stack direction={["column", "row"]}>
         <Button
           fontFamily="Poppins"
           fontSize="13px"
@@ -29,30 +29,33 @@ function CardHeader({ post, ...rest }) {
           bg="customBtn"
           borderRadius="100px"
           textTransform="capitalize"
-          
         >
           Funding
         </Button>
-        <WrapItem>
-          <Avatar
-            height="44px"
-            width="44px"
-            name={post.author.name}
-            src={post.author.profilePictureUrl}
-            ms={1}
-          />
-        </WrapItem>
-        <Heading
-          fontFamily="Poppins"
-          fontSize="18px"
-          fontWeight="600"
-          fontStyle="normal"
-          lineHeight="27px"
-          color="#FFFFFF"
-          ps={1}
-        >
-          {post.author.name}
-        </Heading>
+
+        <Box display="flex" alignItems="center">
+          <WrapItem>
+            <Avatar
+              height="44px"
+              width="44px"
+              name={post.author.name}
+              src={post.author.profilePictureUrl}
+              ms={1}
+            />
+          </WrapItem>
+          <Heading
+            fontFamily="Poppins"
+            fontSize="18px"
+            fontWeight="600"
+            fontStyle="normal"
+            lineHeight="27px"
+            color="#FFFFFF"
+            ps={1}
+          >
+            {post.author.name}
+          </Heading>
+        </Box>
+
         <Text
           fontFamily="Poppins"
           fontSize="12px"
@@ -65,7 +68,7 @@ function CardHeader({ post, ...rest }) {
         >
           {post.time}
         </Text>
-      </HStack>
+      </Stack>
       <Icon viewBox="0 0 200 200" opacity="0.5" fontSize="20px">
         <path
           fill="white"

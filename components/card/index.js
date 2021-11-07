@@ -5,16 +5,12 @@ import CardFooter from "./footer";
 
 function Card({ post, ...rest }) {
   return (
-    <Box width="640px" 
-    width={[
-      "100%", 
-      "100%",
-      "100%",
-      "640px",
-     
-    ]}
-    
-    shadow="md" {...rest} layerStyle="card">
+    <Box
+      width={["100%", "100%", "100%", "640px"]}
+      shadow="md"
+      {...rest}
+      layerStyle="card"
+    >
       <Box p={9}>
         <CardHeader post={post} />
         <CardContent post={post} />
