@@ -13,7 +13,16 @@ function CardHeader({ post, ...rest }) {
   return (
     <Box display="flex" justifyContent="space-between" alignItems="center">
       <HStack>
-        <Button bg="customBtn" borderRadius="50px" textTransform="capitalize">
+        <Button fontFamily="Poppins" 
+        fontSize	="13px"
+        fontWeight="600"
+        lineHeight="19px"
+       color="#FFFFFF"
+       _hover={{
+        background: "customBtn",
+        color: "#FFFFFF",
+      }}
+        bg="customBtn" borderRadius="50px" textTransform="capitalize">
           Funding
         </Button>
         <WrapItem>
