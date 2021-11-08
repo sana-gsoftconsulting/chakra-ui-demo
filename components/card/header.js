@@ -1,5 +1,4 @@
 import {
-  Box,
   Text,
   Heading,
   Icon,
@@ -7,11 +6,12 @@ import {
   Avatar,
   WrapItem,
   Stack,
+  HStack,
 } from "@chakra-ui/react";
 
 function CardHeader({ post, ...rest }) {
   return (
-    <Box display="flex" justifyContent="space-between" alignItems="center">
+    <HStack justify="space-between" align="center">
       <Stack direction={["column", "row"]}>
         <Button
           fontFamily="Poppins"
@@ -33,7 +33,7 @@ function CardHeader({ post, ...rest }) {
           Funding
         </Button>
 
-        <Box display="flex" alignItems="center" >
+        <HStack align="center">
           <WrapItem>
             <Avatar
               height="44px"
@@ -55,7 +55,7 @@ function CardHeader({ post, ...rest }) {
           >
             {post.author.name}
           </Heading>
-        </Box>
+        </HStack>
 
         <Text
           fontFamily="Poppins"
@@ -66,8 +66,8 @@ function CardHeader({ post, ...rest }) {
           color="#FFFFFF"
           opacity="0.5"
           ps={1}
-          display="flex" 
-          alignItems="center" 
+          display="flex"
+          alignItems="center"
         >
           {post.time}
         </Text>
@@ -78,7 +78,7 @@ function CardHeader({ post, ...rest }) {
           d="M0,15A15,15,0,1,1,15,30,15,15,0,0,1,0,15Zm92.93,0a15,15,0,1,1,15,15,15,15,0,0,1-15-15ZM46.46,15a15,15,0,1,1,15,15,15,15,0,0,1-15-15Z"
         />
       </Icon>
-    </Box>
+    </HStack>
   );
 }
 export default CardHeader;

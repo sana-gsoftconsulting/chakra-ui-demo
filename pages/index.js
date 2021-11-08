@@ -1,5 +1,5 @@
 import styles from "../styles/Home.module.css";
-import { Stack } from "@chakra-ui/react";
+import { Stack, VStack } from "@chakra-ui/react";
 import Card from "../components/card";
 import Head from "../components/head";
 
@@ -20,11 +20,11 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head />
-      <main className={styles.main}>
+      <VStack className={styles.main} justify="center" align="center">
         <Stack spacing={8}>
           <Card post={post} />
         </Stack>
-      </main>
+      </VStack>
     </div>
   );
 }
